@@ -9,5 +9,9 @@
 import Foundation
 
 class User {
-    
+    var login: String?
+    var email: String?
+    var level: Double?
+    var profileImageUrl: String?
+    var profileImage: String?    
 }

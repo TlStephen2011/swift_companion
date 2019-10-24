@@ -7,11 +7,21 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
 
 class UserViewController: UIViewController {
 
     var userToGet: String?
     var api: APIController?
+    
+    //MARK: main info properties
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var userLogin: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var levelProgressView: UIProgressView!
+    @IBOutlet weak var levelAmountLabel: UILabel!
+    var user: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,12 +34,49 @@ class UserViewController: UIViewController {
         spinner.didMove(toParent: self)
         
         api!.getUserByLogin(login: userToGet!, completion: { json in
-            print(json)
-            DispatchQueue.main.async {
-                spinner.willMove(toParent: nil)
-                spinner.view.removeFromSuperview()
-                spinner.removeFromParent()
+            let u = User()
+            u.login = json["login"].string
+            u.email = json["email"].string
+            u.profileImageUrl = json["image_url"].string
+            let a = json["cursus_users"].array
+            if let primaryCursus = a?.first {
+                    u.level = primaryCursus["level"].double
             }
+            if (u.profileImageUrl != nil) {
+                Alamofire.request(u.profileImageUrl!).responseImage(completionHandler: { response in
+                    
+                    if let image = response.result.value {
+                        DispatchQueue.main.async {
+                            self.profileImage.image = image
+                            self.profileImage.layer.cornerRadius = self.profileImage.frame.size.height / 2
+                        }
+                    }
+            
+                    DispatchQueue.main.async {
+                        self.userLogin.text = u.login
+                        self.emailLabel.text = u.email
+                        self.levelAmountLabel.text = u.level?.truncatingRemainder(dividingBy: 100).description
+                        self.levelProgressView.progress = Float(u.level! / 21)
+                        spinner.willMove(toParent: nil)
+                        spinner.view.removeFromSuperview()
+                        spinner.removeFromParent()
+                    }
+                    
+                })
+            } else {
+                print("no picture in url")
+                DispatchQueue.main.async {
+                    self.userLogin.text = u.login
+                    self.emailLabel.text = u.email
+                    self.levelAmountLabel.text = u.level?.truncatingRemainder(dividingBy: 100).description
+                    self.levelProgressView.progress = Float(u.level! / 21)
+                    
+                    spinner.willMove(toParent: nil)
+                    spinner.view.removeFromSuperview()
+                    spinner.removeFromParent()
+                }
+            }
+            
         })
     }
     
