@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     private var api: APIController?
     @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var searchTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,5 +45,14 @@ class ViewController: UIViewController {
         searchButton.clipsToBounds = true
         searchButton.backgroundColor = UIColor(red:0.12, green:0.73, blue:0.73, alpha:1.0)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "searchSegue") {
+            let userVC = segue.destination as! UserViewController
+            userVC.userToGet = searchTextField.text
+            userVC.api = api
+        }
+    }
+    
 }
 

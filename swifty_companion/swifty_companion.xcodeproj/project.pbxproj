@@ -15,6 +15,8 @@
 		888A84F82361E5AD0042663D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 888A84F62361E5AD0042663D /* Main.storyboard */; };
 		888A84FA2361E5B90042663D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 888A84F92361E5B90042663D /* Assets.xcassets */; };
 		888A84FD2361E5B90042663D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 888A84FB2361E5B90042663D /* LaunchScreen.storyboard */; };
+		88B40E642362495900BFC354 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B40E632362495900BFC354 /* UserViewController.swift */; };
+		88B40E66236249C400BFC354 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B40E65236249C400BFC354 /* User.swift */; };
 		BE138583FB34F41ECFAA427E /* Pods_swifty_companion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A082E6DDC7EB2F68BF9A936 /* Pods_swifty_companion.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,8 @@
 		888A84F92361E5B90042663D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		888A84FC2361E5B90042663D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		888A84FE2361E5B90042663D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88B40E632362495900BFC354 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		88B40E65236249C400BFC354 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		97F3ADA763D2FEBE73D0C8F7 /* Pods-swifty_companion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swifty_companion.release.xcconfig"; path = "Target Support Files/Pods-swifty_companion/Pods-swifty_companion.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,7 +83,9 @@
 				8826AAE32361E6DE00823A04 /* SpinnerViewController.swift */,
 				888A84F02361E5AD0042663D /* AppDelegate.swift */,
 				888A84F42361E5AD0042663D /* ViewController.swift */,
+				88B40E65236249C400BFC354 /* User.swift */,
 				888A84F62361E5AD0042663D /* Main.storyboard */,
+				88B40E632362495900BFC354 /* UserViewController.swift */,
 				888A84F92361E5B90042663D /* Assets.xcassets */,
 				8826AAE72361E72000823A04 /* intra-background.jpg */,
 				888A84FB2361E5B90042663D /* LaunchScreen.storyboard */,
@@ -214,6 +220,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8826AAE62361E70C00823A04 /* APIController.swift in Sources */,
+				88B40E642362495900BFC354 /* UserViewController.swift in Sources */,
+				88B40E66236249C400BFC354 /* User.swift in Sources */,
 				888A84F52361E5AD0042663D /* ViewController.swift in Sources */,
 				8826AAE42361E6DE00823A04 /* SpinnerViewController.swift in Sources */,
 				888A84F12361E5AD0042663D /* AppDelegate.swift in Sources */,

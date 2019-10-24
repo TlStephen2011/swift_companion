@@ -50,7 +50,7 @@ class APIController {
         
         Alamofire.request(url, method: .get, encoding: URLEncoding(destination: .queryString), headers: headers).responseJSON(completionHandler: { response in
             let json = JSON(response.result.value)
-            completion(json)
+            completion(json)            
         })
         
     }
