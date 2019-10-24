@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="swifty_companion" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="intra-background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="aUx-76-ZLH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search for a user" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nAR-r2-Gnq">
+                                <rect key="frame" x="50" y="316.5" width="275" height="34"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Rv-Zl-1zV">
+                                <rect key="frame" x="50" y="371" width="275" height="38"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                <state key="normal" title="SEARCH">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nAR-r2-Gnq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="EYI-hf-hMi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nAR-r2-Gnq" secondAttribute="trailing" constant="50" id="HL3-rp-2b3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aUx-76-ZLH" secondAttribute="trailing" id="RVK-4o-V9e"/>
+                            <constraint firstItem="aUx-76-ZLH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="WDi-8J-lF7"/>
+                            <constraint firstItem="2Rv-Zl-1zV" firstAttribute="top" secondItem="nAR-r2-Gnq" secondAttribute="bottom" constant="20.5" id="ccN-Zy-cYL"/>
+                            <constraint firstItem="nAR-r2-Gnq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ebg-93-gNN"/>
+                            <constraint firstItem="nAR-r2-Gnq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i6H-Ld-R7M"/>
+                            <constraint firstItem="aUx-76-ZLH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kCU-Aq-ZRu"/>
+                            <constraint firstItem="2Rv-Zl-1zV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="muE-k1-oQt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Rv-Zl-1zV" secondAttribute="trailing" constant="50" id="n2N-B7-nia"/>
+                            <constraint firstItem="aUx-76-ZLH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="sJF-6K-X3B"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchButton" destination="2Rv-Zl-1zV" id="wbk-oq-JsV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="intra-background.jpg" width="2000" height="1300"/>
+    </resources>
+</document>
